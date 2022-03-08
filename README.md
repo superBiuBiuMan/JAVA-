@@ -7,7 +7,6 @@
 ### 用JAVA写的,支持库都放在里面了
 
 - 感兴趣的可以下载看看
-- [github地址](https://github.com/superBiuBiuMan)
 
 ### 功能展示
 
