@@ -8,48 +8,48 @@ import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 
 /**
- * ×ó±ß°×É«¶«¶«µÄÊó±êMouseListener¼àÊÓÆ÷ MyList×ó±ß°×É«¶«¶«µÄÊó±êMouseListener¼àÊÓÆ÷
+ * å·¦è¾¹ç™½è‰²ä¸œä¸œçš„é¼ æ ‡MouseListenerç›‘è§†å™¨ MyListå·¦è¾¹ç™½è‰²ä¸œä¸œçš„é¼ æ ‡MouseListenerç›‘è§†å™¨
  * 
  * @author WmqZj
  */
 
 public class MyListLeftMouseListener implements MouseListener {
-	/** ²Ëµ¥À¸ */
+	/** èœå•æ  */
 	JPopupMenu popupMenu;
-	/** ²Ëµ¥À¸É¾³ı */
+	/** èœå•æ åˆ é™¤ */
 	JMenuItem itemDelete;
-	/** ²Ëµ¥À¸Ìí¼Ó */
+	/** èœå•æ æ·»åŠ  */
 	JMenuItem itemAdd;
-	/** ²Ëµ¥À¸ÖØÃüÃû */
+	/** èœå•æ é‡å‘½å */
 	JMenuItem itemReName;
 
 	/**
-	 * ³õÊ¼»¯ÓÒ¼üÏîÄ¿
+	 * åˆå§‹åŒ–å³é”®é¡¹ç›®
 	 */
 	public MyListLeftMouseListener() {
-		// ·ÖÅäÄÚ´æ
+		// åˆ†é…å†…å­˜
 		popupMenu = new JPopupMenu();
-		itemDelete = new JMenuItem("É¾³ı", new ImageIcon("images/delete.png"));
-		itemAdd = new JMenuItem("Ìí¼Ó", new ImageIcon("images/add.png"));
-		itemReName = new JMenuItem("ÖØÃüÃû", new ImageIcon("images/rename.png"));
-		// Ìí¼Ó¼àÊÓÆ÷
+		itemDelete = new JMenuItem("åˆ é™¤", new ImageIcon("images/delete.png"));
+		itemAdd = new JMenuItem("æ·»åŠ ", new ImageIcon("images/add.png"));
+		itemReName = new JMenuItem("é‡å‘½å", new ImageIcon("images/rename.png"));
+		// æ·»åŠ ç›‘è§†å™¨
 		itemDelete.addActionListener(new MyListRightActionListener());
 		itemAdd.addActionListener(new MyListRightActionListener());
 		itemReName.addActionListener(new MyListRightActionListener());
-		// Ìí¼Ó×é¼ş
+		// æ·»åŠ ç»„ä»¶
 		popupMenu.add(itemDelete);
 		popupMenu.add(itemAdd);
 		popupMenu.add(itemReName);
 	}
 
 	/**
-	 * Õ¹Ê¾ÓÒ¼ü²Ëµ¥²¢ÉèÖÃÏÔÊ¾Î»ÖÃ
+	 * å±•ç¤ºå³é”®èœå•å¹¶è®¾ç½®æ˜¾ç¤ºä½ç½®
 	 */
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// Èç¹û°´ÏÂÓÒ¼ü
+		// å¦‚æœæŒ‰ä¸‹å³é”®
 		if (e.getModifiers() == MouseEvent.BUTTON3_MASK) {
-			// Õ¹Ê¾ÓÒ¼ü²Ëµ¥²¢ÉèÖÃÏÔÊ¾Î»ÖÃ
+			// å±•ç¤ºå³é”®èœå•å¹¶è®¾ç½®æ˜¾ç¤ºä½ç½®
 			popupMenu.show(MyJframe.list, e.getX(), e.getY());
 		}
 	}
